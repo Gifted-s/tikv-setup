@@ -65,8 +65,18 @@ You can then start TiKV with:
 
 You can benchmark TiKV using go-ycsb
  or sysbench
-Example (YCSB load):
 
+Load Workload
+ ```
+go-ycsb load tikv -P workloads/workloada -p tikv.pd="127.0.0.1:2379" -p tikv.type="raw" -p recordcount=10000000 -p operationcount=30000000
+ ```
+Run Workload
+
+```
+go-ycsb run tikv -P workloads/workloada -p tikv.pd="127.0.0.1:2379" -p tikv.type="raw" -p recordcount=10000000 -p operationcount=30000000
+```
+
+Example (YCSB load):
 ```
 go-ycsb load tikv -P workloads/workloada -p tikv.pd="127.0.0.1:2379"
 ```
