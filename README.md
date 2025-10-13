@@ -150,7 +150,11 @@ Now launch TiKV and point it at PD:
   --data-dir=tikv-data \
   --pd="127.0.0.1:2379"
 ```
-
+To restart you need to run the following in the tikv directory otherwise it won't detect the new cluter ID created by the
+Placement Driver if the Placement Driver restarts
+```
+rm -r ./target/release/tikv-data
+```
 
 ⚡ From here you can start modifying tikv.toml configs for RocksDB tuning and restart tikv-server to apply changes.
 
