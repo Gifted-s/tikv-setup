@@ -28,7 +28,7 @@ Clone TiKV repo:
 ```
 git clone https://github.com/tikv/tikv.git
 cd tikv
-make release
+export CMAKE_POLICY_VERSION_MINIMUM=3.5 && export CMAKE_POLICY_DEFAULT_CMP0025=NEW && make build
 ```
 
 Start a PD server (required):
