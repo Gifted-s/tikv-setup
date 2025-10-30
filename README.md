@@ -30,6 +30,7 @@ git clone https://github.com/tikv/tikv.git
 cd tikv
 export CMAKE_ARGS="-DCMAKE_POLICY_VERSION_MINIMUM=3.5" && export CMAKE_POLICY_VERSION_MINIMUM=3.5 && make release
 ```
+In case you face any bug on GCP check this (https://claude.ai/chat/59d4b7ff-7523-4455-92b7-2c9442774180)
 
 Start a PD server (required):
 ```
